@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/keunggulan.css';
+import '../styles/Keunggulan.css';
 
 export default function Keunggulan(){
     const daftarKeunggulan =[
