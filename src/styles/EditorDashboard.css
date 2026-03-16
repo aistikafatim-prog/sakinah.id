@@ -1,0 +1,61 @@
+/* src/styles/EditorDashboard.css */
+
+.editor-container {
+  @apply min-h-screen bg-[#fdf4ff] p-6 pb-24 font-sans relative; /* pb-24 biar tombol home gak nutup konten */
+}
+
+/* --- HEADER MERAH MARUN --- */
+.editor-header-card {
+  @apply max-w-4xl mx-auto bg-[#8a2f47] rounded-3xl p-8 pt-10 text-center text-white shadow-xl relative mt-4 mb-16; 
+  /* bg-[#8a2f47] sesuai warna merah di gambar */
+}
+
+.editor-header-title {
+  @apply text-2xl md:text-3xl font-serif font-bold mb-1;
+}
+
+.editor-header-link {
+  @apply text-pink-200 text-sm mb-12 block hover:underline opacity-90;
+}
+
+/* KOTAK STATISTIK PUTIH (Overlapping) */
+.stats-box {
+  @apply bg-white rounded-xl py-3 px-4 text-[#8a2f47] shadow-lg flex justify-around items-center max-w-lg mx-auto absolute left-0 right-0 -bottom-8 w-[90%];
+  /* absolute -bottom-8: Agar dia nangkring setengah di luar kotak merah */
+}
+
+.stat-item {
+  @apply text-center flex-1;
+}
+
+.stat-number {
+  @apply block text-xl font-bold;
+}
+
+.stat-label {
+  @apply text-sm font-bold text-black; /* Label warna hitam sesuai gambar */
+}
+
+/* --- GRID MENU UTAMA --- */
+.editor-menu-grid {
+  @apply max-w-4xl mx-auto mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6;
+}
+
+/* KARTU MENU (Putih Polos) */
+.menu-card {
+  @apply bg-white py-8 px-4 rounded-xl shadow-sm border border-purple-50 flex flex-col items-center justify-center gap-4 hover:shadow-md hover:border-[#8a2f47] hover:-translate-y-1 transition duration-200 cursor-pointer h-40;
+}
+
+/* Wrapper Ikon (TANPA LINGKARAN) */
+.menu-icon-wrapper {
+  @apply text-[#8a2f47] mb-1; 
+}
+
+.menu-label {
+  @apply font-serif font-bold text-black text-sm md:text-base;
+}
+
+/* --- TOMBOL HOME (Pojok Kanan Bawah) --- */
+.btn-home-floating {
+  @apply fixed bottom-6 right-6 bg-[#8a2f47] w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-xl hover:bg-[#6d2338] transition z-50 border-2 border-pink-200;
+}

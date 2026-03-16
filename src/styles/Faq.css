@@ -1,0 +1,75 @@
+/* src/components/Faq.css */
+
+/* 1. BLOK UTAMA */
+.blok-faq {
+  @apply py-16 bg-purple-100 md:py-24;
+}
+
+.batas-faq {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* 2. HEADER */
+.kepala-faq {
+  @apply text-center mb-12;
+}
+
+.judul-faq {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif mb-4;
+}
+
+.deskripsi-faq {
+  @apply text-gray-600;
+}
+
+/* 3. LIST FAQ */
+.list-faq {
+  @apply flex flex-col gap-4;
+}
+
+/* 4. ITEM FAQ (Kotak Putih) */
+.item-faq {
+  @apply bg-white rounded-2xl overflow-hidden shadow-sm border border-purple-100 transition-all duration-300;
+}
+
+/* TOMBOL PERTANYAAN */
+.tombol-tanya {
+  @apply w-full flex justify-between items-center px-6 py-5 text-left transition-colors duration-300 outline-none;
+}
+
+.teks-tanya {
+  @apply font-bold text-gray-900 text-lg;
+}
+
+/* Ikon Panah (Chevron) */
+.ikon-faq {
+  @apply w-6 h-6 text-gray-400 transition-transform duration-300;
+}
+
+/* KONDISI AKTIF (Saat Dibuka) */
+.item-faq.aktif {
+  @apply shadow-md border-purple-200;
+}
+
+/* Header berubah jadi Ungu saat aktif (Sesuai desain) */
+.item-faq.aktif .tombol-tanya {
+  @apply bg-purple-200;
+}
+
+.item-faq.aktif .teks-tanya {
+  @apply text-purple-900;
+}
+
+.item-faq.aktif .ikon-faq {
+  @apply rotate-180 text-purple-900; /* Panah muter ke atas */
+}
+
+/* AREA JAWABAN */
+.area-jawab {
+  /* Trik animasi slide: max-height diatur lewat JS nanti */
+  @apply bg-white text-gray-600 leading-relaxed overflow-hidden transition-all duration-500 ease-in-out;
+}
+
+.isi-jawab {
+  @apply px-6 pb-6 pt-2;
+}

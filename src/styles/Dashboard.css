@@ -1,0 +1,167 @@
+
+/* --- LAYOUT UTAMA --- */
+.dashboard-container {
+  @apply flex h-screen bg-[#fdf4ff] overflow-hidden;
+}
+
+/* Area Kanan (Sebelah Sidebar) */
+.dashboard-main {
+  @apply flex-1 flex flex-col h-screen overflow-hidden relative;
+}
+
+/* Wrapper Konten yang Bisa di-Scroll */
+.dashboard-content-scroll {
+  @apply flex-1 overflow-y-auto p-4 md:p-6 lg:p-6 ;
+}
+
+/* --- BANNER SAMBUTAN --- */
+.welcome-banner {
+  @apply bg-gradient-to-r from-[#e0c0d0] to-[#f3e6f0]
+  rounded-3xl p-6 lg:p-5 mb-6 relative overflow-hidden
+  shadow-sm flex items-center
+  min-h-[140px] lg:min-h-[110px];
+}
+
+.banner-text-wrapper {
+  @apply relative z-10;
+}
+
+.banner-title {
+  @apply text-xl md:text-2xl lg:text-2xl font-serif font-bold text-[#581c4f] mb-1;
+}
+
+.banner-subtitle {
+  @apply text-gray-700 font-medium text-sm;
+}
+
+.banner-decoration {
+  @apply absolute top-0 right-0 w-32 h-32 bg-white opacity-30 rounded-full translate-x-10 -translate-y-10;
+}
+
+/* --- KARTU STATISTIK --- */
+.stats-grid {
+  /* UBAH DI SINI:
+     - Hapus 'grid-cols-1'
+     - Ganti jadi 'grid-cols-3' agar selalu 3 kolom sejajar
+     - 'gap-3' agar jarak antar kartu tidak terlalu jauh di HP
+  */
+  @apply grid grid-cols-3 gap-3 md:gap-5 mb-6;
+}
+
+.stat-card {
+  @apply bg-white p-3 md:p-5 rounded-2xl md:rounded-3xl shadow-sm text-center
+  border border-purple-50 hover:shadow-md transition
+  flex flex-col items-center justify-center
+  
+  /* Agar tingginya seragam */
+  h-full w-full;
+}
+
+.stat-icon {
+  /* Perkecil icon sedikit di HP agar muat */
+  @apply text-2xl md:text-3xl mb-1 md:mb-2;
+}
+
+.stat-value {
+  /* Perkecil angka sedikit di HP */
+  @apply text-lg md:text-2xl font-bold text-[#581c4f];
+}
+
+.stat-label {
+  /* Perkecil tulisan label di HP */
+  @apply font-serif font-bold text-gray-600 mt-1 text-xs md:text-sm;
+}
+
+/* --- BAGIAN BAWAH (AKSI & RIWAYAT) --- */
+.bottom-section {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+.section-title {
+  @apply text-lg font-serif font-bold text-[#581c4f] mb-3;
+}
+
+/* Kartu Aksi Cepat */
+.quick-action-card {
+  @apply bg-white p-5 rounded-3xl shadow-sm border border-purple-50 flex flex-col gap-3;
+}
+
+.btn-action-primary {
+  @apply w-full py-2.5 px-4 bg-[#862876] text-white rounded-full
+  font-bold shadow hover:bg-[#6d1f5d]
+  transition transform hover:-translate-y-1 text-center block text-sm;
+}
+
+.btn-action-secondary {
+  @apply w-full py-2.5 px-4 bg-[#581c4f] text-white rounded-full
+  font-bold shadow hover:bg-[#42103a]
+  transition transform hover:-translate-y-1 text-center block text-sm;
+}
+
+/* Kartu Riwayat */
+.history-card {
+  @apply bg-white p-5 rounded-3xl shadow-sm border border-purple-50
+  flex flex-col gap-3;
+   /* min-height: auto; */
+}
+
+.history-table-wrapper {
+  @apply overflow-x-auto;
+}
+
+.history-table {
+  @apply w-full text-left text-sm;
+}
+
+.table-header {
+  @apply border-b border-gray-100 text-gray-500 font-serif;
+}
+
+.table-row {
+  @apply border-b border-gray-50 hover:bg-purple-50/50 transition;
+}
+
+.status-badge-lunas {
+  @apply bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold inline-block;
+}
+/* Container untuk judul dan link */
+.history-header {
+  @apply flex justify-between items-center mb-3;
+}
+
+/* Gaya untuk link "Lihat Semua" */
+.view-all-link {
+  @apply text-xs font-bold text-[#862876] hover:text-[#581c4f] transition-colors;
+}
+
+/* Gaya badge status (menggantikan inline style) */
+.status-badge {
+  @apply px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider;
+}
+
+.status-badge.paid {
+  @apply bg-green-100 text-green-700;
+}
+
+.status-badge.pending {
+  @apply bg-yellow-100 text-yellow-700;
+}
+
+/* Menjaga tinggi card agar tetap rapi */
+.history-card {
+  min-height: 250px;
+}
+/* Container footer di bawah tabel */
+.history-footer {
+  @apply mt-2 pt-3 border-t border-gray-50 flex justify-center;
+}
+
+/* Tombol Lihat Semua yang Estetik */
+.btn-view-all {
+  @apply w-full py-2 px-4 
+  rounded-xl border-2 border-[#f3e8ff]
+  text-[#862876] font-bold text-xs
+  hover:bg-[#862876] hover:text-white hover:border-[#862876]
+  transition-all duration-300 text-center;
+}
+

@@ -1,0 +1,47 @@
+  .wadah-pratinjau {
+    @apply w-full aspect-video bg-gray-800 rounded-xl overflow-hidden relative shadow-2xl border-4 border-gray-900 mb-6 flex flex-col items-center justify-center text-center p-8;
+  }
+  
+  /* Elemen di dalam Pratinjau */
+  .latar-layar {
+    @apply absolute inset-0 w-full h-full object-cover opacity-60;
+  }
+  .konten-layar {
+    @apply relative z-10 max-w-2xl;
+  }
+  .judul-layar {
+    @apply text-3xl md:text-5xl font-bold text-white font-serif mb-2 drop-shadow-lg;
+  }
+  .subjudul-layar {
+    @apply text-lg md:text-xl text-white/90 font-light drop-shadow-md;
+  }
+  .kotak-tamu-simulasi {
+    @apply mt-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl animate-pulse;
+  }
+  .teks-tamu-simulasi {
+    @apply text-2xl font-bold text-[#fdf4ff];
+  }
+
+  /* Panel Pengaturan (Form di bawah layar) */
+  .panel-pengaturan {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  
+  /* Kartu Upload Background */
+  .kartu-latar {
+    @apply bg-white rounded-2xl p-5 border border-purple-100 shadow-sm h-full;
+  }
+  .area-upload-latar {
+    @apply h-32 bg-[#fdf4ff] border-2 border-dashed border-purple-200 rounded-xl flex flex-col items-center justify-center cursor-pointer hover:bg-purple-50 transition mt-2;
+  }
+  .ikon-upload {
+    @apply text-2xl mb-1 text-[#581c4f];
+  }
+  .teks-upload {
+    @apply text-xs font-bold text-[#581c4f];
+  }
+
+  /* Tombol Aksi Utama (Buka Layar Penuh) */
+  .tombol-layar-penuh {
+    @apply w-full bg-[#581c4f] text-white font-bold py-3 rounded-xl shadow-lg hover:bg-[#42103a] transition flex items-center justify-center gap-2 mt-6;
+  }

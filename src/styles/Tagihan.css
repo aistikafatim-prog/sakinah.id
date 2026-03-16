@@ -1,0 +1,86 @@
+/* src/styles/Tagihan.css */
+
+/* --- LAYOUT UTAMA (Wajib ada biar Sidebar muncul) --- */
+.tagihan-page-container {
+  @apply flex h-screen bg-[#fdf4ff] overflow-hidden;
+}
+
+.tagihan-main-wrapper {
+  @apply flex-1 flex flex-col h-full relative overflow-hidden;
+}
+
+.tagihan-scroll-area {
+  @apply flex-1 overflow-y-auto p-6 md:p-8;
+}
+
+/* --- JUDUL HALAMAN --- */
+.tagihan-header-title {
+  @apply text-3xl font-serif font-bold text-[#581c4f] mb-8;
+}
+
+/* --- KONTEN TAGIHAN --- */
+.tagihan-content {
+  @apply flex flex-col lg:flex-row gap-8 items-start;
+}
+
+/* Kartu Ringkasan (Kiri) */
+.ringkasan-card {
+  @apply bg-white p-6 rounded-3xl shadow-sm border border-purple-50 flex-1 w-full;
+}
+
+.ringkasan-title {
+  @apply text-xl font-bold text-[#581c4f] mb-6 border-b border-gray-100 pb-4;
+}
+
+.ringkasan-list {
+  @apply space-y-4;
+}
+
+.ringkasan-item {
+  @apply flex justify-between text-gray-600;
+}
+
+.ringkasan-value {
+  @apply font-bold text-gray-800;
+}
+
+.status-belum {
+  @apply bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-bold;
+}
+
+.ringkasan-divider {
+  @apply my-6 border-gray-100;
+}
+
+.ringkasan-total {
+  @apply flex justify-between text-xl font-bold text-[#581c4f] mb-6;
+}
+
+.btn-bayar {
+  @apply w-full bg-[#581c4f] hover:bg-[#42103a] text-white py-3 rounded-xl font-bold transition shadow-md;
+}
+
+/* Wrapper Metode (Kanan) */
+.metode-wrapper {
+  @apply w-full lg:w-1/3 space-y-4;
+}
+
+.metode-title {
+  @apply text-xl font-bold text-[#581c4f] mb-4;
+}
+
+.metode-card {
+  @apply bg-white p-4 rounded-2xl border border-purple-50 flex items-center gap-4 hover:border-[#581c4f] cursor-pointer transition;
+}
+
+.metode-icon {
+  @apply text-2xl bg-purple-50 w-12 h-12 flex items-center justify-center rounded-full;
+}
+
+.metode-name {
+  @apply font-bold text-gray-800;
+}
+
+.metode-desc {
+  @apply text-xs text-gray-500;
+}

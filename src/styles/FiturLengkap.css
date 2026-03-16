@@ -1,0 +1,66 @@
+/* src/components/FiturLengkap.css */
+
+/* 1. BLOK UTAMA */
+.blok-fitur-lengkap {
+  @apply py-16 bg-white md:py-24 overflow-hidden;
+}
+
+.batas-fitur-lengkap {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* 2. HEADER */
+.kepala-fitur-lengkap {
+  @apply text-center mb-16 max-w-3xl mx-auto;
+}
+
+.judul-fitur-lengkap {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif mb-4;
+}
+
+.deskripsi-fitur-lengkap {
+  @apply text-gray-600 text-sm md:text-base leading-relaxed;
+}
+
+/* 3. GRID UTAMA (2 Kolom) */
+.grid-fitur-lengkap {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 items-start;
+  /* gap-x-16 memberi jarak di tengah agar ikon tidak dempet */
+}
+
+/* 4. ITEM FITUR (Flexbox) */
+.item-fitur {
+  @apply flex items-start gap-4 transition duration-300 hover:-translate-y-1;
+}
+
+/* --- LOGIKA ARAH (Kiri vs Kanan) --- */
+
+/* Gaya untuk Item di Kolom Kiri (Teks Rata Kanan, Ikon di Kanan) */
+.item-kiri {
+  @apply md:flex-row-reverse md:text-right;
+  /* flex-row-reverse: Membalik posisi (Ikon jadi di kanan, Teks di kiri) */
+}
+
+/* Gaya untuk Item di Kolom Kanan (Teks Rata Kiri, Ikon di Kiri) */
+.item-kanan {
+  @apply md:flex-row md:text-left;
+}
+
+/* 5. IKON (Lingkaran) */
+.wadah-ikon {
+  @apply flex-shrink-0 w-14 h-14 rounded-full border-2 border-purple-900 flex items-center justify-center text-purple-900 bg-white shadow-md;
+}
+
+/* Ukuran SVG di dalam lingkaran */
+.wadah-ikon svg {
+  @apply w-7 h-7;
+}
+
+/* 6. TEKS KONTEN */
+.judul-item-fitur {
+  @apply text-lg font-bold text-gray-900 mb-1;
+}
+
+.deskripsi-item-fitur {
+  @apply text-sm text-gray-600 leading-relaxed;
+}

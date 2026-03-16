@@ -1,0 +1,47 @@
+/* src/components/Kado.css */
+
+/* 1. BLOK UTAMA (Background Putih) */
+.blok-kado {
+  @apply py-16 bg-white md:py-24;
+}
+
+.batas-kado {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* 2. JUDUL */
+.kepala-kado {
+  @apply text-center mb-12 max-w-3xl mx-auto;
+}
+
+.judul-kado {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif mb-4;
+}
+
+.deskripsi-kado {
+  @apply text-gray-600 text-sm md:text-base leading-relaxed;
+}
+
+/* 3. GRID KARTU (2 Kolom) */
+.grid-kado {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12;
+}
+
+/* 4. KARTU KADO */
+.kartu-kado {
+  @apply border border-gray-200 rounded-[2rem] p-8 md:p-10 flex flex-col items-center text-center hover:shadow-lg transition duration-300 bg-white;
+}
+
+.judul-kartu-kado {
+  @apply text-xl font-bold text-gray-900 mb-6 self-start; /* Judul rata kiri */
+}
+
+/* Gambar Ilustrasi */
+.img-kado {
+  @apply h-40 w-auto mb-8 object-contain;
+filter: sepia(100%) hue-rotate(240deg) saturate(130%);
+}
+
+.teks-kartu-kado {
+  @apply text-gray-500 text-sm leading-relaxed text-justify; /* Teks rata kanan-kiri (justify) biar rapi */
+}

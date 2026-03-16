@@ -1,0 +1,108 @@
+/* ========== COVER ========== */
+.cover {
+  @apply fixed inset-0 bg-cover bg-center flex items-center justify-center text-white z-50;
+  background-image:
+    linear-gradient(rgba(88,28,79,.85), rgba(88,28,79,.9)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0202128");
+}
+
+.cover-isi {
+  @apply text-center animate-pulse;
+}
+
+.cover-subjudul {
+  @apply text-sm tracking-widest uppercase mb-4;
+}
+
+.cover-judul {
+  @apply text-4xl md:text-5xl font-serif font-bold mb-6;
+}
+
+.cover-tamu {
+  @apply bg-white/20 backdrop-blur-sm p-4 rounded-xl border border-white/30 mb-8;
+}
+
+.cover-tamu-label {
+  @apply text-xs;
+}
+
+.cover-tamu-nama {
+  @apply text-xl font-bold;
+}
+
+.btn-buka {
+  @apply bg-white text-[#581c4f] px-8 py-3 rounded-full font-bold shadow-lg
+  hover:scale-105 transition;
+}
+
+/* ========== HALAMAN UTAMA ========== */
+.halaman-undangan {
+  @apply min-h-screen bg-[#fdf4ff] font-sans pb-24 overflow-x-hidden;
+}
+
+/* Hero */
+.hero {
+  @apply h-64 md:h-96 relative;
+}
+
+.hero img {
+  @apply w-full h-full object-cover;
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-[#fdf4ff] to-transparent;
+}
+
+/* Salam */
+.salam {
+  @apply text-center px-6 -mt-16 relative z-10;
+}
+
+.salam h2 {
+  @apply text-3xl font-serif font-bold text-[#581c4f];
+}
+
+.salam p {
+  @apply text-gray-600 text-sm max-w-md mx-auto;
+}
+
+/* Mempelai */
+.mempelai {
+  @apply max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-12 text-center;
+}
+
+.profil img {
+  @apply w-32 h-32 rounded-full border-4 border-[#581c4f] p-1 mb-4 shadow-lg mx-auto;
+}
+
+.profil h3 {
+  @apply text-2xl font-serif font-bold text-[#581c4f];
+}
+
+.profil p {
+  @apply text-sm text-gray-500;
+}
+
+/* Acara */
+.acara {
+  @apply bg-[#581c4f] text-white py-12 px-6 text-center mx-4 rounded-3xl shadow-xl;
+}
+
+.acara h3 {
+  @apply text-2xl font-serif font-bold mb-4;
+}
+
+.btn-peta {
+  @apply mt-6 bg-white text-[#581c4f] px-6 py-2 rounded-full font-bold
+  hover:bg-gray-100 transition;
+}
+
+/* Menu Bawah */
+.menu-bawah {
+  @apply fixed bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md
+  px-6 py-3 rounded-full shadow-2xl flex gap-6 border border-purple-100;
+}
+
+.menu-bawah button {
+  @apply flex flex-col items-center text-[#581c4f] text-xs font-bold hover:scale-110 transition;
+}

@@ -1,0 +1,158 @@
+/* src/styles/AdminPanel.css */
+
+.admin-container {
+  @apply min-h-screen bg-[#fdf4ff] p-6 lg:p-10 font-sans;
+}
+
+.admin-header {
+  @apply flex flex-col sm:flex-row justify-between items-center mb-8 gap-4;
+}
+
+.admin-judul {
+  @apply text-3xl font-bold text-[#581c4f];
+}
+
+.btn-logout {
+  @apply bg-red-500 hover:bg-red-600 text-white px-5 py-2.5 rounded-lg font-bold transition-colors shadow-sm;
+}
+
+.admin-card {
+  @apply bg-white rounded-2xl p-6 lg:p-8 shadow-[0_10px_30px_rgba(88,28,79,0.08)];
+}
+
+.admin-action-bar {
+  @apply flex flex-col sm:flex-row justify-between items-center mb-6 gap-4;
+}
+
+.admin-subjudul {
+  @apply text-xl font-bold text-[#581c4f];
+}
+
+.btn-tambah {
+  @apply bg-[#581c4f] hover:bg-[#42103a] text-white px-5 py-2.5 rounded-lg font-bold transition-colors shadow-sm;
+}
+
+/* Tabel Admin */
+.tabel-wrapper {
+  @apply overflow-x-auto;
+}
+
+.admin-table {
+  @apply w-full border-collapse min-w-[600px];
+}
+
+.admin-table thead tr {
+  @apply border-b-2 border-pink-100;
+}
+
+.admin-th {
+  @apply text-left p-4 bg-pink-50/50 text-[#581c4f] font-bold;
+}
+
+.admin-tr {
+  @apply border-b border-gray-100 hover:bg-pink-50/30 transition-colors;
+}
+
+.admin-td {
+  @apply p-4 text-gray-700;
+}
+
+/* Kosmetik Tabel */
+.badge-free {
+  @apply px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-green-100 text-green-700;
+}
+
+.badge-premium {
+  @apply px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-rose-100 text-rose-700;
+}
+
+.teks-harga {
+  @apply text-gray-600 font-medium;
+}
+
+/* Tombol Aksi */
+.aksi-wrapper {
+  @apply flex gap-2;
+}
+
+.btn-edit {
+  @apply bg-amber-500 hover:bg-amber-600 text-white px-4 py-1.5 rounded-md text-sm font-semibold transition-colors;
+}
+
+.btn-hapus {
+  @apply bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded-md text-sm font-semibold transition-colors;
+}
+
+/* State Lainnya */
+.admin-loading {
+  @apply text-center text-[#581c4f] font-bold animate-pulse py-10;
+}
+
+.admin-empty {
+  @apply text-center p-10 text-gray-500;
+}
+/* src/styles/AdminPanel.css */
+
+/* ... (kode sebelumnya tetap ada) ... */
+
+.btn-edit:active, .btn-hapus:active, .btn-tambah:active {
+  @apply transform scale-95; /* Efek tombol tertekan sedikit */
+}
+
+.btn-edit, .btn-hapus, .btn-tambah {
+  @apply transition-all duration-200;
+}
+/* ... (kode CSS sebelumnya biarkan saja di atas) ... */
+
+/* === MODAL TAMBAH TEMPLATE === */
+.modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4;
+}
+
+.modal-box {
+  @apply bg-white rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden;
+}
+
+.modal-header {
+  @apply bg-[#fdf4ff] px-6 py-4 border-b border-pink-100 flex justify-between items-center;
+}
+
+.modal-judul {
+  @apply text-xl font-bold text-[#581c4f] m-0;
+}
+
+.btn-close {
+  @apply text-gray-400 hover:text-red-500 font-bold text-2xl transition-colors;
+}
+
+.modal-body {
+  @apply p-6;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-bold text-gray-700 mb-1;
+}
+
+.form-input {
+  @apply w-full px-4 py-2.5 rounded-lg border border-pink-200 focus:border-[#581c4f] focus:ring-2 focus:ring-[#581c4f]/20 outline-none transition-all bg-gray-50;
+}
+
+.form-file {
+  @apply w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-pink-50 file:text-[#581c4f] hover:file:bg-pink-100 transition-all cursor-pointer;
+}
+
+.modal-footer {
+  @apply bg-gray-50 px-6 py-4 border-t border-gray-100 flex justify-end gap-3;
+}
+
+.btn-batal {
+  @apply px-5 py-2 rounded-lg font-bold text-gray-600 bg-gray-200 hover:bg-gray-300 transition-colors;
+}
+
+.btn-simpan {
+  @apply px-5 py-2 rounded-lg font-bold text-white bg-[#581c4f] hover:bg-[#42103a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}

@@ -1,0 +1,85 @@
+/* src/components/Harga.css */
+
+.blok-harga {
+  @apply py-16 bg-purple-100 md:py-24;
+}
+
+.batas-harga {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.kepala-harga {
+  @apply text-center mb-16 max-w-2xl mx-auto;
+}
+
+.judul-harga {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif mb-4;
+}
+
+.sub-judul-harga {
+  @apply text-gray-600 text-sm md:text-base leading-relaxed;
+}
+
+/* --- PERBAIKAN 1: GRID --- */
+.grid-harga {
+  /* HAPUS 'items-start'. Biarkan default (stretch) agar tinggi kolom sama. */
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+/* --- PERBAIKAN 2: KARTU --- */
+.kartu-harga {
+  /* Tambah 'flex flex-col h-full' agar kartu memanjang penuh mengikuti temannya */
+  @apply bg-white rounded-[2.5rem] overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl border border-purple-100 relative flex flex-col h-full;
+}
+
+/* HEADER & KOTAK HARGA (Tetap Sama) */
+.label-atas {
+  @apply text-center py-6 text-sm font-bold uppercase tracking-widest text-gray-500;
+}
+
+.nama-paket {
+  @apply text-center text-2xl font-bold text-gray-900 mb-6;
+}
+
+.kotak-harga {
+  @apply py-8 text-center text-white;
+}
+
+.kotak-abu {
+  @apply bg-gray-200 text-gray-800;
+}
+
+.kotak-merah {
+  @apply bg-rose-900 text-white;
+}
+
+.teks-nominal {
+  @apply text-4xl font-extrabold mb-1;
+}
+
+.teks-promo {
+  @apply text-xs font-medium opacity-80;
+}
+
+/* --- PERBAIKAN 3: LIST FITUR --- */
+.list-fitur {
+  /* Tambah 'flex-1'. Ini akan mendorong area tombol ke paling bawah */
+  @apply p-8 space-y-4 text-center flex-1;
+}
+
+.item-fitur-harga {
+  @apply text-gray-600 text-sm font-medium border-b border-gray-50 pb-2 last:border-0;
+}
+
+/* TOMBOL BAWAH */
+.area-tombol-harga {
+  @apply px-8 pb-8 text-center;
+}
+
+.btn-harga-outline {
+  @apply w-full py-3 rounded-full border-2 border-purple-900 text-purple-900 font-bold hover:bg-purple-50 transition;
+}
+
+.btn-harga-solid {
+  @apply w-full py-3 rounded-full bg-purple-900 text-white font-bold hover:bg-purple-800 transition shadow-lg hover:shadow-purple-900/30;
+}

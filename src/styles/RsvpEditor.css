@@ -1,0 +1,112 @@
+  /* Filter Tab (Semua, Hadir, Tidak Hadir) */
+  .filter-btn {
+    @apply px-4 py-2 rounded-full text-sm font-bold border transition-all;
+  }
+  .filter-btn.active {
+    @apply bg-[#581c4f] text-white border-[#581c4f] shadow-md;
+  }
+  .filter-btn.inactive {
+    @apply bg-white text-gray-500 border-purple-100 hover:border-[#581c4f] hover:text-[#581c4f];
+  }
+
+  /* Badge Status Kehadiran */
+  .status-badge {
+    @apply text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1;
+  }
+  .status-hadir {
+    @apply bg-green-100 text-green-700 border border-green-200;
+  }
+  .status-tidak {
+    @apply bg-red-100 text-red-700 border border-red-200;
+  }
+  .status-ragu {
+    @apply bg-yellow-100 text-yellow-700 border border-yellow-200;
+  }
+
+  /* Kartu Ucapan Tamu */
+  .guest-message-card {
+    @apply bg-white p-5 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition mb-4 relative;
+  }
+.rsvp-stats-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4 mb-8;
+  }
+
+  /* Kartu Statistik Default (Putih/Ungu) */
+  .stat-card-purple {
+    @apply bg-white p-4 rounded-2xl border border-purple-100 shadow-sm text-center flex flex-col items-center justify-center;
+  }
+  .stat-num-purple { @apply text-2xl font-bold text-[#581c4f]; }
+  .stat-label-purple { @apply text-xs text-gray-500 font-bold uppercase mt-1; }
+
+  /* Kartu Statistik Hijau (Hadir) */
+  .stat-card-green {
+    @apply bg-green-50 p-4 rounded-2xl border border-green-100 shadow-sm text-center flex flex-col items-center justify-center;
+  }
+  .stat-num-green { @apply text-2xl font-bold text-green-700; }
+  .stat-label-green { @apply text-xs text-green-600 font-bold uppercase mt-1; }
+
+  /* Kartu Statistik Merah (Tidak Hadir) */
+  .stat-card-red {
+    @apply bg-red-50 p-4 rounded-2xl border border-red-100 shadow-sm text-center flex flex-col items-center justify-center;
+  }
+  .stat-num-red { @apply text-2xl font-bold text-red-700; }
+  .stat-label-red { @apply text-xs text-red-600 font-bold uppercase mt-1; }
+
+  /* AREA KONTROL (Filter & Search) */
+  .rsvp-controls-area {
+    @apply flex flex-col md:flex-row justify-between items-center gap-4 mb-6;
+  }
+  .rsvp-filter-group {
+    @apply flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0;
+  }
+  
+  /* INPUT PENCARIAN */
+  .rsvp-search-wrapper {
+    @apply relative w-full md:w-auto;
+  }
+  .rsvp-search-input {
+    @apply pl-10 pr-4 py-2 rounded-full border border-purple-200 focus:outline-none focus:border-[#581c4f] w-full text-sm bg-white;
+  }
+  .rsvp-search-icon {
+    @apply absolute left-3 top-2.5 text-gray-400 text-sm;
+  }
+
+  /* --- KARTU UCAPAN (MESSAGE CARD) --- */
+  .guest-card {
+    @apply bg-white p-5 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition mb-4;
+  }
+  
+  /* Header Kartu (Avatar + Nama + Status) */
+  .guest-header {
+    @apply flex justify-between items-start mb-3;
+  }
+  .guest-info {
+    @apply flex items-center gap-3;
+  }
+  .guest-avatar {
+    @apply w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-[#581c4f] font-bold text-lg;
+  }
+  .guest-name {
+    @apply font-bold text-gray-800 text-sm md:text-base;
+  }
+  .guest-date {
+    @apply block text-xs text-gray-400 font-normal;
+  }
+
+  /* Kotak Isi Pesan */
+  .guest-message-box {
+    @apply bg-[#fdf4ff] p-3 rounded-xl border border-dashed border-purple-200 text-gray-700 text-sm italic relative;
+  }
+
+  /* Footer Kartu (Tombol Hapus) */
+  .guest-footer {
+    @apply mt-3 flex justify-end;
+  }
+  .btn-delete-rsvp {
+    @apply text-xs text-red-500 hover:text-red-700 font-bold flex items-center gap-1 transition cursor-pointer;
+  }
+
+  /* State Kosong */
+  .rsvp-empty-state {
+    @apply text-center py-10 text-gray-400 text-sm;
+  }

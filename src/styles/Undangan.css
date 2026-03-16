@@ -1,0 +1,113 @@
+/* src/styles/Undangan.css */
+
+/* =========================================
+   1. DEFINISI ANIMASI
+   ========================================= */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes pulseSlow { 0%, 100% { transform: scale(1); } 50% { transform: scale(0.98); } }
+@keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes float { 0% { background-position: 0% 0%; } 50% { background-position: 50% 50%; } 100% { background-position: 0% 0%; } }
+
+/* =========================================
+   2. GLOBAL LAYOUT
+   ========================================= */
+.undangan-wrapper {
+  @apply min-h-screen font-serif text-gray-800 overflow-hidden relative bg-[#E8E0D5];
+}
+
+/* Background Bunga Bergerak */
+.moving-bg {
+  @apply fixed inset-0 w-full h-full z-0;
+  /* Gambar Pola Bunga Halus */
+  background-image: url('https://www.transparenttextures.com/patterns/floral-linen.png');
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  animation: float 60s linear infinite;
+  opacity: 0.3; 
+}
+
+/* Helper Font */
+.font-script { font-family: 'Great Vibes', cursive; }
+.font-serif-main { font-family: 'Cormorant Garamond', serif; }
+
+/* =========================================
+   3. TEMA DORAEMON / TERRACOTTA
+   ========================================= */
+.text-terracotta { @apply text-[#D85D5D]; }
+.border-terracotta { @apply border-[#D85D5D]; }
+.bg-offwhite { @apply bg-[#faf9f6]; }
+
+/* KARTU DORAEMON (HERO) - PERBAIKAN LAYOUT */
+.doraemon-card {
+  @apply relative z-10 w-[85%] max-w-[360px] 
+         h-[80vh] /* Kita pertinggi sedikit kartunya biar lega */
+         bg-offwhite 
+         rounded-t-[180px] rounded-b-[50px] 
+         border-[4px] border-[#D85D5D]/30 
+         shadow-2xl overflow-hidden flex flex-col mx-auto;
+  
+  /* Tidak ada animasi slideUp di sini biar layout stabil */
+}
+
+.doraemon-photo-area {
+  /* Area Foto KITA KECILKAN JADI 45% (Tadi 55%) */
+  @apply h-[45%] w-full border-b-[4px] border-[#D85D5D]/20 overflow-hidden relative;
+}
+
+.doraemon-text-area {
+  /* Area Teks KITA PERBESAR JADI 55% & HAPUS SCROLL */
+  @apply h-[55%] flex flex-col justify-center items-center p-4 text-center;
+  /* Scrollbar sudah dihapus */
+}
+
+/* KARTU COUPLE (PILL) */
+.pill-card {
+  @apply w-[85%] max-w-[360px] bg-offwhite 
+         rounded-[100px] 
+         border-[4px] border-[#D85D5D]/30 
+         shadow-2xl flex flex-col items-center 
+         py-12 px-6 space-y-8 text-center mx-auto;
+  
+  animation: slideUp 1.0s ease-out forwards;
+}
+
+.photo-circle {
+  @apply w-32 h-32 rounded-full border-[4px] border-[#D85D5D] overflow-hidden shadow-md;
+}
+
+/* TOMBOL & LABEL */
+.label-wedding {
+  @apply text-[10px] tracking-[0.2em] font-bold text-gray-500 uppercase;
+}
+
+.btn-terracotta {
+  @apply bg-[#D85D5D] text-white px-6 py-2 rounded-full 
+         shadow-lg shadow-red-200 hover:bg-[#b04040] transition-all 
+         font-serif tracking-widest text-[10px] uppercase font-bold cursor-pointer inline-block;
+}
+
+.link-instagram {
+  @apply bg-[#D85D5D] text-white px-4 py-1.5 rounded-full 
+         text-[10px] shadow-md hover:scale-105 transition-transform 
+         uppercase tracking-wider cursor-pointer inline-block;
+}
+
+/* =========================================
+   4. FLOATING ELEMENTS
+   ========================================= */
+.btn-music-float {
+  @apply fixed bottom-24 right-4 z-50 bg-[#D85D5D] text-white p-3 rounded-full 
+         shadow-lg transition-all duration-1000 cursor-pointer;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 4s linear infinite;
+}
+
+.navbar-undangan {
+  @apply fixed top-0 left-0 right-0 z-40 bg-[#faf9f6]/90 backdrop-blur-md 
+         py-3 px-6 flex justify-center gap-6 
+         text-[10px] font-bold uppercase tracking-widest text-gray-500 
+         transition-all duration-700 border-b border-[#D85D5D]/20;
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* CONTAINER UTAMA */
+  .closing-wrapper {
+    @apply flex items-center justify-center h-auto py-12 px-4 bg-[#FFF5F7] relative;
+  }
+
+  /* KARTU PENUTUP */
+  .closing-card {
+    @apply w-[85%] max-w-[360px] bg-[#faf9f6] 
+           rounded-[100px] border-[4px] border-[#D85D5D]/30 
+           shadow-xl flex flex-col items-center 
+           py-16 px-8 text-center relative overflow-hidden;
+  }
+
+  /* FRAME FOTO AKHIR (Opsional) */
+  .closing-image-frame {
+    @apply w-full h-[250px] rounded-t-[80px] rounded-b-[40px] 
+           overflow-hidden mb-8 shadow-md border-b-4 border-[#D85D5D]/30;
+  }
+  
+  .closing-image-frame img {
+    @apply w-full h-full object-cover hover:scale-105 transition-transform duration-700;
+  }
+
+  /* TEKS PENUTUP */
+  .closing-text {
+    @apply text-gray-600 text-xs leading-relaxed mb-8 px-2 font-serif italic;
+  }
+
+  /* SALAM HORMAT */
+  .closing-salam {
+    @apply text-gray-500 text-[10px] uppercase tracking-widest mb-2 font-bold;
+  }
+
+  /* NAMA PASANGAN */
+  .closing-couple {
+    @apply text-[#D85D5D] text-4xl mb-10 leading-normal;
+    font-family: 'Great Vibes', cursive;
+  }
+
+  /* CREDIT FOOTER */
+  .footer-credit {
+    @apply text-[9px] text-gray-400 mt-8 font-serif uppercase tracking-wider opacity-60;
+  }
+}

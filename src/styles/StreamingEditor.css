@@ -1,0 +1,53 @@
+/* Area Pratinjau Video (Kotak Hitam) */
+  .pratinjau-video {
+    @apply w-full aspect-video bg-gray-900 rounded-xl overflow-hidden relative mb-6 shadow-lg border border-gray-800 flex items-center justify-center;
+  }
+  
+  /* Iframe / Video Player */
+  .bingkai-video {
+    @apply w-full h-full absolute inset-0;
+  }
+  
+  /* Placeholder saat belum ada link */
+  .placeholder-video {
+    @apply flex flex-col items-center justify-center text-center p-6;
+  }
+  .ikon-play {
+    @apply w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white text-2xl mb-3 backdrop-blur-sm border border-white/20;
+  }
+  .teks-placeholder {
+    @apply text-white/60 text-sm;
+  }
+
+  /* Grid Pilihan Platform */
+  .grid-platform {
+    @apply grid grid-cols-3 gap-3 mb-4;
+  }
+  
+  /* Tombol Pilihan Platform (YouTube, Zoom, dll) */
+  .tombol-platform {
+    @apply flex flex-col items-center justify-center p-4 rounded-xl border transition-all cursor-pointer h-24;
+  }
+  .tombol-platform-aktif {
+    @apply bg-[#581c4f] text-white border-[#581c4f] shadow-md transform scale-[1.02];
+  }
+  .tombol-platform-mati {
+    @apply bg-white text-gray-500 border-purple-100 hover:border-[#581c4f] hover:text-[#581c4f] hover:bg-purple-50;
+  }
+  
+  .ikon-platform {
+    @apply text-2xl mb-2;
+  }
+  .nama-platform {
+    @apply text-xs font-bold;
+  }
+/* Floating Save Bar */
+.floating-save-bar {
+  @apply mt-6 flex justify-end; 
+}
+
+
+/* Tombol Simpan */
+.btn-save-data {
+  @apply bg-[#581c4f] text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#6d2462] transition-all duration-200;
+}

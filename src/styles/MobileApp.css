@@ -1,0 +1,76 @@
+/* src/components/MobileApp.css */
+
+/* 1. BLOK UTAMA (Background Ungu Full) */
+.blok-mobile {
+  @apply py-16 md:py-24 bg-[#a55eea] text-white overflow-hidden;
+  /* Warna Hex #a55eea ini ungu medium yang mirip di gambar */
+}
+
+.batas-mobile {
+  @apply max-w-6xl mx-auto px-6 lg:px-8;
+}
+
+/* 2. GRID 2 KOLOM */
+.grid-mobile {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-12 items-center;
+}
+
+/* 3. AREA TEKS (Kiri) */
+.judul-mobile {
+  @apply text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight;
+}
+
+.deskripsi-mobile {
+  @apply text-purple-100 text-lg mb-10 leading-relaxed;
+}
+
+/* TOMBOL DOWNLOAD */
+.grup-tombol-dl {
+  @apply flex flex-col sm:flex-row gap-4 mb-8;
+}
+
+.btn-download {
+  @apply bg-white text-gray-900 px-6 py-3 rounded-2xl flex items-center gap-4 shadow-lg transition transform hover:-translate-y-1 hover:shadow-xl cursor-pointer;
+  /* rounded-2xl biar sudutnya tumpul banget kayak di desain */
+}
+
+.ikon-dl {
+  @apply w-8 h-8 text-gray-800;
+}
+
+.teks-btn-dl {
+  @apply flex flex-col items-start;
+}
+
+.label-kecil {
+  @apply text-xs text-gray-500 font-medium uppercase tracking-wide;
+}
+
+.label-besar {
+  @apply text-lg font-bold leading-none;
+}
+
+/* FOOTER NOTE */
+.info-iphone {
+  @apply text-sm text-purple-200 mt-4 border-t border-purple-400/30 pt-4;
+}
+
+/* 4. AREA HP (Kanan) */
+.area-hp-mobile {
+  @apply flex justify-center md:justify-end relative;
+}
+
+/* Frame HP (Kita pakai CSS Frame lagi biar konsisten & ringan) */
+.frame-hp-apps {
+  @apply relative w-[280px] h-[580px] bg-gray-900 rounded-[3rem] shadow-2xl border-[8px] border-gray-900 overflow-hidden ring-8 ring-black/20;
+}
+
+/* Kamera Depan (Notch) */
+.frame-hp-apps::before {
+  content: '';
+  @apply absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-20;
+}
+
+.layar-apps {
+  @apply w-full h-full object-cover bg-white;
+}

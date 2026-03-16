@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* =========================================
+     LAYOUT & SCROLL AREA (Tetap Aman)
+  ========================================= */
+  .sakinah-layout {
+    @apply flex h-screen bg-[#f9f0f9] overflow-hidden;
+  }
+
+  .sakinah-main-content {
+    @apply flex-1 flex flex-col overflow-hidden pt-[30px] px-0 pb-0 m-0;
+  }
+
+  .sakinah-scroll-area {
+    @apply flex-1 overflow-y-auto overflow-x-hidden p-5 md:pt-2 md:px-10 md:pb-10 block min-h-0 w-full;
+  }
+
+  /* =========================================
+     HEADER SECTION (Tetap Aman)
+  ========================================= */
+  .sakinah-header-page {
+    @apply flex flex-col md:flex-row justify-between items-start md:items-center mt-0 mb-[30px] gap-4 md:gap-0;
+  }
+
+  .sakinah-title {
+    @apply font-serif text-[2.2rem] font-bold text-[#581c4f] m-0 leading-none;
+  }
+
+  .header-right-group {
+    @apply flex flex-row items-center gap-[15px];
+  }
+
+  .btn-back, .btn-create-top {
+    @apply w-[140px] flex justify-center items-center text-white py-2.5 px-4 rounded-full font-bold text-sm border-none cursor-pointer transition-opacity duration-200 hover:opacity-80;
+  }
+  
+  .btn-back { @apply bg-[#581c4f]; }
+  .btn-create-top { @apply bg-[#862876]; }
+
+  /* =========================================
+     DESAIN BARU: LIST ITEM HORIZONTAL
+  ========================================= */
+  .sakinah-list-container {
+    @apply flex flex-col gap-4 w-full;
+  }
+
+  .sakinah-list-item {
+    @apply bg-white rounded-xl p-4 w-full shadow-sm border border-gray-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 md:gap-0 transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  .list-item-left {
+    @apply flex items-center gap-4;
+  }
+
+  .list-icon-box {
+    @apply w-[60px] h-[60px] rounded-lg bg-[#faeef5] text-[#862876] flex justify-center items-center shrink-0;
+  }
+
+  .list-text-group {
+    @apply flex flex-col;
+  }
+
+  .list-title {
+    @apply font-bold text-[#1e1e1e] text-[1.1rem] m-0 leading-tight;
+  }
+
+  .list-subtitle {
+    @apply text-sm text-gray-400 m-0 mt-1;
+  }
+
+  .list-item-actions {
+    @apply flex items-center gap-3 w-full md:w-auto justify-end;
+  }
+
+  .btn-lihat-web {
+    @apply flex-1 md:flex-none flex justify-center items-center gap-2 bg-[#581c4f] text-white py-2.5 px-5 rounded-lg font-bold text-sm border-none cursor-pointer transition-opacity duration-200 hover:opacity-80;
+  }
+
+  .btn-kelola-list {
+    @apply flex-1 md:flex-none flex justify-center items-center gap-2 bg-[#862876] text-white py-2.5 px-5 rounded-lg font-bold text-sm border-none cursor-pointer transition-opacity duration-200 hover:opacity-80;
+  }
+
+  /* =========================================
+     EMPTY STATE & LOADING (Tetap Aman)
+  ========================================= */
+  .empty-state-container {
+    @apply flex justify-center items-center flex-1 min-h-[50vh] w-full;
+  }
+
+  .empty-state-card {
+    @apply bg-white rounded-[24px] py-[50px] px-[40px] text-center w-full max-w-[420px] shadow-[0_10px_30px_rgba(88,28,79,0.05)] border border-[rgba(134,40,118,0.1)];
+  }
+
+  .empty-icon { @apply text-[4rem] mb-5; }
+  .empty-title { @apply text-[#581c4f] text-[1.5rem] font-bold mb-3; }
+  .empty-desc { @apply text-[#666] text-[0.95rem] leading-[1.6] mb-[30px]; }
+
+  .btn-buat-sekarang {
+    @apply bg-[#862876] text-white py-3.5 px-8 rounded-xl text-base font-bold border-none cursor-pointer w-full transition-all duration-200 hover:bg-[#581c4f] hover:-translate-y-0.5;
+  }
+
+  .loading-state {
+    @apply text-center py-[50px] text-[#888] font-bold mt-[50px];
+  }
+}

@@ -1,0 +1,75 @@
+/* src/components/Navbar.css */
+
+/* --- BAGIAN DASAR --- */
+.nav-blok {
+  @apply sticky top-0 z-50 bg-white shadow-sm w-full;
+}
+
+.nav-batas {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.nav-baris {
+  @apply flex justify-between items-center h-20;
+}
+
+/* --- LOGO --- */
+.logo-area {
+  @apply flex-shrink-0 flex items-center gap-2 cursor-pointer;
+filter: sepia(100%) hue-rotate(240deg) saturate(150%);
+}
+
+.logo-img {
+  @apply h-16 w-auto;
+}
+
+/* --- MENU PC (Layar Besar) --- 
+hidden: "Secara bawaan (di HP), sembunyikan aku!"
+md:flex: "Tapi kalau layar sudah masuk ukuran Medium/Laptop (md), tolong munculkan aku!"*/
+.menu-pc {
+  @apply hidden md:flex space-x-8;
+}
+
+.link {
+  @apply text-gray-600 hover:text-purple-700 transition font-medium text-base;
+}
+
+.link-aktif {
+  @apply text-gray-900 font-bold border-b-2 border-purple-900;
+}
+
+/* --- TOMBOL --- */
+.area-tombol {
+  @apply hidden md:flex items-center;
+}
+
+.btn-masuk {
+  @apply bg-purple-900 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-800 transition shadow-lg transform hover:-translate-y-0.5;
+}
+
+/* --- MENU HP (Layar Kecil) --- 
+Tampilkan aku di HP, TAPI kalau layar sudah masuk ukuran 
+Laptop (md), tolong sembunyikan aku!" (Makanya tombol garis tiga tidak muncul di Laptop).*/
+.tombol-toggle {
+  @apply md:hidden flex items-center;
+}
+
+.ikon-menu {
+  @apply text-gray-600 hover:text-purple-900 focus:outline-none transition;
+}
+
+.menu-hp {
+  @apply md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0;
+}
+
+.list-hp {
+  @apply px-4 pt-2 pb-4 space-y-2 flex flex-col;
+}
+
+.link-hp {
+  @apply block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-purple-900 hover:bg-purple-50;
+}
+
+.btn-masuk-hp {
+  @apply w-full bg-purple-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-800 transition;
+}

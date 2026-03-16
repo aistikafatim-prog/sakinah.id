@@ -1,0 +1,113 @@
+/* src/styles/Template.css */
+
+/* =================================================
+    LAYOUT HALAMAN
+================================================= */
+.template-page-container {
+    @apply flex h-screen bg-[#f9f0f9] overflow-hidden; /* Latar belakang ungu lyla sangat muda */
+}
+
+.template-main-wrapper {
+    @apply flex-1 flex flex-col h-full relative overflow-hidden;
+}
+
+.template-scroll-area {
+    @apply flex-1 overflow-y-auto p-5 md:p-7 lg:p-8;
+}
+
+.loading-container {
+    @apply flex justify-center items-center py-20 text-purple-400 font-medium;
+}
+
+/* =================================================
+    HEADER
+================================================= */
+.template-header {
+    @apply flex justify-between items-center mb-6 md:mb-8;
+}
+
+.template-title {
+    @apply text-2xl md:text-4xl font-serif font-bold text-[#581c4f];
+}
+
+/* Tombol Kembali (Sekarang selaras dengan tema ungu) */
+.btn-back {
+    @apply bg-[#581c4f] text-white px-6 py-2
+    rounded-full font-bold text-sm shadow-md
+    hover:bg-[#43153c] transition-all
+    flex items-center gap-2;
+}
+
+/* =================================================
+    GRID & KARTU
+================================================= */
+.template-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.template-card {
+    @apply bg-white rounded-[2rem] /* Extra rounded sesuai desain modern */
+    border border-purple-100
+    shadow-sm hover:shadow-xl
+    transition duration-300
+    flex flex-col p-5;
+}
+
+.template-img-wrapper {
+    @apply h-44 md:h-48 rounded-2xl
+    overflow-hidden bg-gray-100
+    mb-4 relative;
+}
+
+.template-img {
+    @apply w-full h-full object-cover object-top;
+}
+
+/* =================================================
+    INFO & BADGE
+================================================= */
+.template-info {
+    @apply text-center mb-5;
+}
+
+.template-name {
+    @apply text-xl font-serif font-bold text-[#2d0f28] mb-1;
+}
+
+.template-price {
+    @apply text-sm font-semibold text-gray-500 mb-2;
+}
+
+.badge-type {
+    @apply inline-block text-[10px] bg-[#f3e8ff] text-[#581c4f] 
+    font-extrabold px-3 py-1 rounded-md tracking-widest;
+}
+
+/* =================================================
+    AKSI TOMBOL (PERUBAHAN WARNA DI SINI)
+================================================= */
+.template-actions {
+    @apply flex gap-3 mt-auto;
+}
+
+.btn-preview {
+    @apply flex-1 py-2.5 px-3
+    rounded-xl bg-transparent border border-[#581c4f] text-[#581c4f]
+    text-center font-bold text-xs
+    hover:bg-[#581c4f] hover:text-white transition;
+}
+
+/* Tombol Pilih Template yang sudah diperbaiki warnanya */
+.btn-select {
+    @apply flex-[1.5] py-2.5 px-3
+    rounded-xl
+    bg-[#862876] /* Warna ungu medium sakina */
+    text-white
+    font-bold text-xs
+    hover:bg-[#581c4f] /* Berubah ke ungu gelap saat hover */
+    transition-all shadow-md text-center;
+}
+
+.btn-select.is-loading {
+    @apply opacity-70 cursor-wait;
+}

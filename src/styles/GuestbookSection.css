@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* CONTAINER UTAMA */
+  .guestbook-wrapper {
+    @apply flex items-center justify-center h-auto py-12 px-4 bg-[#FFF5F7] relative;
+  }
+
+  /* KARTU GUESTBOOK */
+  .guestbook-card {
+    @apply w-[85%] max-w-[360px] bg-[#faf9f6] 
+           rounded-[100px] border-[4px] border-[#F4C2C2] 
+           shadow-xl flex flex-col items-center 
+           py-12 px-6 text-center transition-all duration-500;
+  }
+
+  /* JUDUL */
+  .guestbook-title {
+    @apply text-[#D85D5D] text-5xl mb-6;
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .guestbook-text {
+    @apply text-gray-600 text-xs leading-relaxed mb-6 px-2 font-serif;
+  }
+
+  /* TOMBOL MERAH */
+  .btn-open-modal {
+    @apply bg-[#D85D5D] text-white px-8 py-3 rounded-full 
+           text-xs font-serif font-bold shadow-lg 
+           hover:bg-[#c04d4d] hover:scale-105 transition-all cursor-pointer;
+  }
+
+  /* --- COUNTDOWN TIMER (Kotak-kotak Waktu) --- */
+  .countdown-container {
+    @apply flex flex-wrap justify-center gap-3 mb-8 w-full;
+  }
+
+  .countdown-box {
+    @apply bg-[#D85D5D] text-white w-14 h-14 rounded-xl 
+           flex flex-col items-center justify-center shadow-md;
+  }
+
+  .countdown-val {
+    @apply text-lg font-bold leading-none font-serif;
+  }
+
+  .countdown-label {
+    @apply text-[8px] uppercase tracking-wider mt-1 opacity-90;
+  }
+
+  /* --- MODAL POPUP STYLES --- */
+  
+  /* Layar Belakang Gelap */
+  .modal-overlay {
+    @apply fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in;
+  }
+
+  /* Kotak Form (Popup) */
+  .modal-content {
+    @apply bg-white w-full max-w-sm rounded-3xl p-6 shadow-2xl relative animate-scale-up border border-pink-100;
+  }
+
+  /* Tombol Close (X) */
+  .btn-close {
+    @apply absolute top-4 right-4 w-8 h-8 flex items-center justify-center 
+           bg-red-100 text-red-500 rounded-full font-bold cursor-pointer hover:bg-red-200 transition;
+  }
+
+  /* FORM INPUT */
+  .form-label {
+    @apply block text-left text-[#D85D5D] text-[10px] font-bold uppercase tracking-wider mb-1 mt-3;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl border border-[#F4C2C2] 
+           bg-[#FFF5F7] text-gray-700 text-xs font-serif outline-none
+           focus:border-[#D85D5D] focus:ring-1 focus:ring-[#D85D5D] transition-all;
+  }
+
+  /* Animasi Popup */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-fade-in { animation: fadeIn 0.3s ease-out; }
+  .animate-scale-up { animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+}

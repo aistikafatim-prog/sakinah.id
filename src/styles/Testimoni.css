@@ -1,0 +1,68 @@
+/* src/components/Testimoni.css */
+
+/* 1. BLOK UTAMA */
+.blok-testimoni {
+  @apply py-16 bg-white md:py-24;
+}
+
+.batas-testimoni {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* 2. HEADER */
+.kepala-testimoni {
+  @apply text-center mb-12 px-2;
+}
+
+.judul-testimoni {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif mb-4;
+}
+
+/* 3. WADAH SCROLL HORIZONTAL (JANTUNGNYA DISINI) */
+.wadah-scroll {
+  @apply flex gap-6 overflow-x-hidden pb-8 px-2;
+  /* overflow-x-hidden: Scrollbar hilang, user tidak bisa geser manual (biar gak tabrakan sama animasi) */
+  
+  scroll-behavior: auto; /* Penting! Jangan smooth biar reset-nya instan */
+}
+
+/* KARTU TESTIMONI */
+.kartu-testi {
+  /* Pastikan flex-shrink-0 agar tidak menciut */
+  @apply relative flex-shrink-0 w-[300px] h-[450px] md:w-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg transition transform hover:scale-[1.02] duration-300;
+  
+  /* Matikan snap align karena kita pakai animasi jalan sendiri */
+  /* scroll-snap-align: center; <-- HAPUS INI */
+}
+
+/* Gambar Background Penuh */
+.img-bg-testi {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+/* Overlay Hitam Tipis (Supaya teks putih terbaca kalau background terang) */
+.overlay-gelap {
+  @apply absolute inset-0 bg-black/10;
+}
+
+/* 5. KOTAK PUTIH DI BAWAH (Review Box) */
+.kotak-review {
+  @apply absolute bottom-4 left-4 right-4 bg-white rounded-xl p-5 shadow-lg flex flex-col gap-2;
+}
+
+.nama-user {
+  @apply font-bold text-gray-900 text-lg;
+}
+
+.tipe-acara {
+  @apply text-sm text-gray-500 mb-1;
+}
+
+.bintang {
+  @apply flex text-yellow-400 text-sm mb-2;
+}
+
+.teks-review {
+  @apply text-sm text-gray-700 leading-snug line-clamp-3; 
+  /* line-clamp-3: Kalau teks kepanjangan, otomatis jadi titik-titik (...) di baris ke-3 */
+}

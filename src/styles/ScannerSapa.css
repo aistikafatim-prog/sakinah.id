@@ -1,0 +1,47 @@
+/* =======================================================
+   CUSTOM STYLE UNTUK HTML5-QRCODE (VERSI NETRAL / DARK)
+   ======================================================= */
+
+/* 1. Tombol "Request Camera Permission" */
+#html5-qrcode-button-camera-permission {
+  /* UBAH DISINI: Dari merah menjadi Abu-abu Tua (Gray-800) yang netral */
+  @apply bg-gray-800 text-white px-6 py-3 rounded-xl border-none shadow-lg mb-4 cursor-pointer transition-all hover:bg-black !important;
+  
+  /* Sembunyikan teks Inggris asli */
+  font-size: 0 !important; 
+}
+
+/* Teks Bahasa Indonesia */
+#html5-qrcode-button-camera-permission::after {
+  content: "📷 Izinkan Akses Kamera";
+  @apply text-sm font-bold tracking-wide !important;
+}
+
+/* 2. Link Teks "Scan an Image File" */
+#html5-qrcode-anchor-scan-type-change {
+  /* UBAH DISINI: Teks link jadi putih agak transparan agar netral */
+  @apply inline-block mt-2 text-white/80 font-semibold cursor-pointer hover:text-white transition-all !important;
+  text-decoration: none !important;
+  font-size: 0 !important; 
+}
+
+#html5-qrcode-anchor-scan-type-change::after {
+  content: "Atau Pilih Foto Karcis dari Galeri";
+  @apply text-xs border-b border-white/50 pb-1 !important;
+}
+
+/* 3. Sembunyikan Ikon Info (i) */
+#qr-reader__dashboard_section_header span {
+  @apply hidden !important;
+}
+
+/* 4. Tombol "Stop Scanning" (Tetap merah tidak apa-apa karena untuk berhenti) */
+#html5-qrcode-button-camera-stop {
+  @apply bg-red-600 text-white px-4 py-2 rounded-md border-none shadow-sm cursor-pointer mt-4 hover:bg-red-700 !important;
+  font-size: 0 !important;
+}
+
+#html5-qrcode-button-camera-stop::after {
+  content: "Matikan Kamera";
+  @apply text-xs font-bold !important;
+}

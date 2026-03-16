@@ -1,0 +1,86 @@
+/* src/components/Hero.css */
+
+/* 1. BLOK UTAMA (Background ungu muda tipis) */
+.hero-blok {
+  @apply relative overflow-hidden pt-10 pb-20 lg:pt-20 lg:pb-28;
+  /* kode ini untuk memanggil gambar */
+  background-image: url('/images/bg-hero.webp'); /* Pastikan nama file sesuai */
+  background-size: cover;    /* Agar gambar memenuhi seluruh area */
+  background-position: center; /* Agar gambar pas di tengah */
+  background-repeat: no-repeat; /* Agar gambar tidak berulang-ulang */
+}
+
+/* 2. PEMBATAS & GRID (Pemisah Kiri-Kanan) */
+.hero-grid {
+  /* Di HP 1 kolom, Di Laptop (md) jadi 2 kolom */
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center;
+}
+
+/* --- BAGIAN KIRI (TEKS) --- */
+.area-teks {
+  @apply space-y-8 text-center md:text-left; /* HP: Tengah, Laptop: Rata Kiri */
+}
+
+.judul-besar {
+  @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl font-serif;
+}
+
+.teks-deskripsi {
+  @apply text-base text-gray-900 sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0;
+}
+
+.grup-tombol {
+  @apply flex flex-col sm:flex-row gap-4 justify-center md:justify-start;
+}
+
+/* Tombol Utama (Ungu Gelap) */
+.btn-utama {
+  @apply flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-white bg-purple-900 hover:bg-purple-800 md:py-4 md:text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1;
+}
+
+/* Tombol Kedua (Garis Pinggir / Outline) */
+.btn-outline {
+  @apply flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-purple-900 bg-transparent border-2 border-purple-900 hover:bg-purple-50 md:py-4 md:text-lg transition transform hover:-translate-y-1;
+}
+
+/* --- BAGIAN KANAN (GAMBAR) --- */
+.area-gambar {
+  @apply relative flex justify-center md:justify-end;
+}
+
+/* Efek Hiasan (Bulatan ungu di belakang HP) */
+.hero-grid {
+  /* Di HP 1 kolom, Di Laptop (md) jadi 2 kolom */
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center;
+}
+
+.hiasan-belakang {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0;
+}
+
+/* --- FRAME HP DENGAN CSS SAJA --- */
+.hp-css  {
+  @apply relative mx-auto border-gray-900 bg-gray-900 border-[10px] rounded-[2.5rem] h-[500px] w-[260px] shadow-lg overflow-hidden;
+  /* border-[10px] adalah bezel hitam tebalnya */
+}
+.hp-css::before {
+  content: '';
+  @apply absolute top-0 left-1/2 transform -translate-x-1/2 h-[24px] w-[90px] bg-black rounded-b-xl z-20;
+  /* Ini membuat kotak hitam melengkung di bagian atas layar */
+}
+/* CLASS BARU: Untuk Gambar Slideshow */
+.slide-gambar {
+  /* 1. Posisi & Ukuran (Static) */
+  @apply absolute inset-0 w-full h-full object-cover;
+
+  /* 2. Animasi Transisi (Static) */
+  @apply transition-opacity duration-1000 ease-in-out;
+  
+  /* 3. Default: Sembunyi (Opacity 0) */
+  opacity: 0;
+}
+
+/* CLASS TAMBAHAN: Kalau sedang aktif */
+.slide-gambar.aktif {
+  opacity: 1; /* Munculkan */
+}

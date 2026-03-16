@@ -1,0 +1,52 @@
+/* src/components/keunggulan.css */
+
+/* 1. BLOK PEMBUNGKUS UTAMA */
+.blok-keunggulan {
+    @apply py-16 bg-white md:py-24;
+}
+
+.batas-keunggulan {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* 2. JUDUL SECTION (Tengah) */
+.kepala-keunggulan {
+    @apply text-center mb-16 max-w-3xl mx-auto;
+}
+
+.judul-section {
+    @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif;
+}
+
+/* Biar teks "Memilih Wevitation" beda font (Serif) seperti di desain */
+.font-spesial {
+    @apply font-serif italic text-purple-900 block mt-2;
+}
+
+/* 3. GRID 3 KOLOM */
+.grid-keunggulan {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-12;
+}
+
+/* 4. KARTU keunggulan (Per Item) */
+.kartu-keunggulan {
+    @apply flex flex-col items-center text-center p-4;
+}
+
+/* Gambar Ilustrasi */
+.gambar-ilustrasi {
+    @apply w-64 h-48 mb-6 object-contain transform hover:scale-110 transition duration-500;
+/* 1. Sepia: Bikin gambar jadi kecoklatan dulu (netral) */
+  /* 2. Hue-rotate: Putar warnanya ke arah Ungu (sekitar 240-260 derajat) */
+  /* 3. Saturate: Terangkan warnanya biar 'jreng' */
+  filter: sepia(100%) hue-rotate(240deg) saturate(150%);
+}
+
+/* Teks di dalam kartu */
+.judul-kartu {
+    @apply text-xl font-bold text-gray-900 mb-3;
+}
+
+.deskripsi-kartu {
+    @apply text-gray-600 leading-relaxed text-sm md:text-base;
+}

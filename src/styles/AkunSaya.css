@@ -1,0 +1,49 @@
+/* src/styles/AkunSaya.css */
+
+.akun-page-container {
+  @apply flex min-h-screen bg-[#fdf4ff];
+}
+
+.akun-content {
+  @apply flex-1 p-8 overflow-y-auto;
+}
+
+/* Kartu Form Edit */
+.akun-card {
+  @apply max-w-2xl mx-auto bg-white p-8 rounded-3xl shadow-sm border border-purple-50;
+}
+
+.akun-title {
+  @apply text-2xl font-serif font-bold text-[#581c4f] mb-6 border-b pb-4;
+}
+
+.form-group {
+  @apply mb-6;
+}
+
+.form-label {
+  @apply block text-[#581c4f] font-bold mb-2;
+}
+
+/* Input Biasa */
+.form-input {
+  @apply w-full p-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-[#581c4f] outline-none transition-shadow;
+}
+
+/* Input Disabled (Email) */
+.form-input-disabled {
+  @apply w-full p-3 bg-gray-100 rounded-xl text-gray-500 cursor-not-allowed border-none;
+}
+
+.form-hint {
+  @apply text-xs text-gray-400 mt-1;
+}
+
+/* Tombol Simpan */
+.btn-save {
+  @apply bg-[#581c4f] text-white px-6 py-3 rounded-xl font-bold w-full transition-transform duration-200;
+}
+
+.btn-save:hover {
+  @apply bg-[#42103a] -translate-y-1 shadow-md;
+}

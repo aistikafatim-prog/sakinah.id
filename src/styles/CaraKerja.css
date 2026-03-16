@@ -1,0 +1,86 @@
+/* src/components/CaraKerja.css */
+
+/* 1. BLOK UTAMA */
+.blok-cara {
+  @apply py-20 bg-purple-100 overflow-hidden;
+}
+
+.batas-cara {
+  @apply max-w-5xl mx-auto px-6 relative;
+}
+
+/* GARIS TENGAH (Tulang Punggung Timeline) */
+/* Kita buat garis vertikal putus-putus di tengah halaman */
+.batas-cara::before {
+  content: '';
+  @apply absolute left-4 md:left-1/2 top-60 bottom-0 w-1 bg-purple-200 -translate-x-1/2 md:border-l-2 md:border-dashed md:border-purple-300 md:bg-transparent;
+  /* Di HP garisnya di kiri (left-4), di Laptop garisnya di tengah (left-1/2) */
+}
+
+/* 2. JUDUL */
+.kepala-cara {
+  @apply text-center mb-20 relative z-10;
+}
+
+.judul-cara {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif mb-4;
+}
+
+.deskripsi-cara {
+  @apply text-gray-600 max-w-2xl mx-auto bg-purple-50 px-4 inline-block;
+}
+
+/* 3. ITEM ITEM (Zig-Zag) */
+.item-langkah {
+  @apply flex flex-col md:flex-row items-center justify-between mb-16 relative w-full;
+}
+
+/* PENGATURAN ZIG-ZAG (Genap vs Ganjil) */
+/* Kalau dia anak Genap (2, 4), balik posisinya */
+.item-langkah:nth-child(even) {
+  @apply md:flex-row-reverse;
+}
+
+/* KOTAK KONTEN (Teks) */
+.konten-langkah {
+  @apply w-full md:w-[42%] bg-white p-6 rounded-2xl shadow-lg border-l-4 border-purple-500 relative transition  hover:-translate-y-2  duration-300;
+  /* Di HP lebar full, di Laptop lebar 42% biar ada jarak di tengah */
+}
+
+/* Segitiga kecil penunjuk ke arah tengah (Hiasan CSS) */
+.konten-langkah::after {
+  content: '';
+  @apply hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white transform rotate-45;
+}
+
+/* Mengatur arah segitiga berdasarkan posisi */
+.item-langkah:nth-child(odd) .konten-langkah::after {
+  @apply -right-2 border-r border-t border-gray-100; /* Panah ke kanan */
+}
+.item-langkah:nth-child(even) .konten-langkah::after {
+  @apply -left-2 border-l border-b border-gray-100; /* Panah ke kiri */
+}
+
+
+/* LINGKARAN NOMOR (Di Tengah) */
+.lingkaran-angka {
+  @apply w-12 h-12 md:w-16 md:h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-xl md:text-2xl font-bold shadow-[0_0_0_8px_rgba(233,213,255,0.5)] z-10 my-4 md:my-0 absolute left-4 md:left-1/2 md:-translate-x-1/2;
+  /* Shadow tebal (rgba) itu efek cincin di luar lingkaran */
+}
+
+/* ISI TEKS */
+.judul-langkah {
+  @apply text-lg font-bold text-gray-900 mb-2;
+}
+
+.teks-langkah {
+  @apply text-gray-600 text-sm leading-relaxed;
+}
+
+/* --- KHUSUS TAMPILAN HP (Mobile) --- */
+/* Geser konten ke kanan biar gak nabrak garis kiri */
+@media (max-width: 768px) {
+  .konten-langkah {
+    @apply ml-12 w-[calc(100%-3rem)]; /* Geser 3rem ke kanan */
+  }
+}

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- AREA CUSTOM CLASS KITA --- */
+@layer components {
+  
+  /* 1. Tombol Utama (Bisa dipakai dimanapun) */
+  .btn-primary {
+    @apply bg-purple-900 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-800 transition shadow-lg transform hover:-translate-y-0.5;
+  }
+
+  /* 2. Link Menu Desktop (Standar) */
+  .nav-link {
+    @apply text-gray-600 hover:text-purple-700 transition font-medium text-base;
+  }
+
+  /* 3. Link Menu Desktop (Yang sedang Aktif/Dipilih) */
+  .nav-link-active {
+    @apply text-gray-900 font-bold border-b-2 border-purple-900;
+  }
+
+  /* 4. Link Menu Mobile (Dropdown) */
+  .mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-purple-900 hover:bg-purple-50;
+  }
+  .html {
+  /* 1. Agar scroll-nya mulus pelan-pelan */
+  scroll-behavior: smooth;
+  
+  /* 2. Agar judul tidak ketutupan Navbar saat berhenti scroll. 
+     Ganti 80px sesuai perkiraan tinggi navbar kamu. */
+  scroll-padding-top: 80px; 
+}
+}

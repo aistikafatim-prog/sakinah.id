@@ -1,0 +1,65 @@
+/* src/components/Tema.css */
+
+/* BLOK UTAMA */
+.blok-tema {
+  @apply py-16 bg-purple-100 md:py-24;
+}
+
+.batas-tema {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* JUDUL */
+.kepala-tema {
+  @apply text-center mb-16;
+}
+
+.judul-tema {
+  @apply text-3xl font-extrabold text-gray-900 sm:text-4xl font-serif;
+}
+
+/* GRID */
+.grid-tema {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center;
+}
+
+/* KARTU PUTIH */
+.kartu-tema {
+  @apply bg-white rounded-[2.5rem] p-8 shadow-xl flex flex-col items-center w-full max-w-md hover:shadow-2xl transition duration-300;
+}
+
+/* --- RAHASIA FRAME HP REALISTIS (CSS ONLY) --- */
+.frame-hp {
+  @apply relative mx-auto border-gray-900 bg-gray-900 border-[10px] rounded-[2.5rem] h-[500px] w-[260px] shadow-xl overflow-hidden;
+  /* border-[10px] adalah bezel hitam tebalnya */
+}
+
+/* PONI / DYNAMIC ISLAND (Kamera Depan) */
+.frame-hp::before {
+  content: '';
+  @apply absolute top-0 left-1/2 transform -translate-x-1/2 h-[24px] w-[90px] bg-black rounded-b-xl z-20;
+  /* Ini membuat kotak hitam melengkung di bagian atas layar */
+}
+
+/* GAMBAR LAYAR DI DALAMNYA */
+.layar-hp {
+  @apply h-full w-full object-cover rounded-[2rem] bg-white;
+}
+
+/* TOMBOL DI BAWAH KARTU */
+.nama-tema {
+  @apply text-xl font-bold text-gray-900 mt-6 mb-3;
+}
+
+.btn-preview {
+  @apply bg-purple-500 text-white px-8 py-2 rounded-full font-medium hover:bg-purple-700 transition shadow-md w-full max-w-[200px];
+}
+
+/* TOMBOL LIHAT SEMUA */
+.area-tombol-bawah {
+  @apply text-center mt-12;
+}
+
+.btn-lihat-semua {
+  @apply bg-purple-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-800 transition shadow-lg inline-flex items-center gap-2;
+}
