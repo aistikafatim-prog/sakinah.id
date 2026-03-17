@@ -304,9 +304,11 @@ const FormInvitation = () => {
           if (files.story_fotos[i]) payload.append('story_foto', files.story_fotos[i]);
         });
 
-        await axios.post('http://localhost:5000/api/invitation/create', payload, {
-          headers: { Authorization: `Bearer ${token}` }
-        });
+        const API = import.meta.env.VITE_API_URL;
+
+await axios.post(`${API}/api/invitation/create`, payload, {
+  headers: { Authorization: `Bearer ${token}` }
+});
         alert("🎉 Undangan berhasil dibuat!");
       }
       navigate('/undangan-saya');
